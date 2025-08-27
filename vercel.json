@@ -27,5 +27,5 @@
     "NODE_ENV": "production"
   },
   "installCommand": "cd frontend && npm install && cd ../backend && npm install",
-  "buildCommand": "cd frontend && npm install && npx vite build --mode production"
+  "buildCommand": "cd frontend && npm install && npx vite build --mode production --force"
 }
