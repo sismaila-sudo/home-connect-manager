@@ -93,3 +93,5 @@ PORT=5000
 ## 👥 Contributeurs
 
 Développé avec ❤️ pour simplifier la gestion de foyer
+
+🚀 **Déployé sur Vercel + Supabase**
