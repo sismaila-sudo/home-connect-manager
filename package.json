@@ -1,0 +1,25 @@
+{
+  "name": "home-connect-manager",
+  "version": "1.0.0",
+  "description": "Gestionnaire de foyer intelligent avec gestion des tâches, recettes, budget et équipe",
+  "scripts": {
+    "dev": "concurrently \"npm run dev:backend\" \"npm run dev:frontend\"",
+    "dev:backend": "cd backend && npm run dev",
+    "dev:frontend": "cd frontend && npm run dev",
+    "build": "npm run build:frontend && npm run build:backend",
+    "build:frontend": "cd frontend && npm run build",
+    "build:backend": "cd backend && npm install --production",
+    "start": "cd backend && npm start",
+    "install:all": "npm install && cd backend && npm install && cd ../frontend && npm install",
+    "db:setup": "cd backend && node scripts/setup-db.js"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "keywords": ["home", "management", "tasks", "recipes", "budget", "family"],
+  "author": "Ismaila Seck",
+  "license": "MIT",
+  "devDependencies": {
+    "concurrently": "^8.2.2"
+  }
+}
