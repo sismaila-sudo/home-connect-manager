@@ -20,6 +20,11 @@ try {
     cwd: __dirname
   });
 
+  // Add _redirects file for SPA routing
+  const redirectsPath = path.join(distPath, '_redirects');
+  fs.writeFileSync(redirectsPath, '/*    /index.html   200\n');
+  console.log('📄 Added _redirects file for SPA routing');
+
   console.log('✅ Build completed successfully!');
 } catch (error) {
   console.error('❌ Build failed:', error.message);
@@ -46,6 +51,11 @@ try {
     if (fs.existsSync(tsconfigBackup)) {
       fs.renameSync(tsconfigBackup, tsconfigPath);
     }
+
+    // Add _redirects file for SPA routing
+    const redirectsPath = path.join(distPath, '_redirects');
+    fs.writeFileSync(redirectsPath, '/*    /index.html   200\n');
+    console.log('📄 Added _redirects file for SPA routing');
 
     console.log('✅ Alternative build completed!');
   } catch (altError) {
